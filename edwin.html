@@ -1,138 +1,27 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing Page</title>
+<!DOCTYPE html>
+<html>
+<head>
     <style>
-      header {
-        background-color: #0c2b4b;
-        padding: 40px;
-        text-align: center;
-        font-size: 24px;
-        color: white;
-        font-weight: bold;
-      }
-      button {
-        color: white;
-        background-color: rgb(73, 39, 210);
-        border-radius: 10px;
-        padding: 10px;
-        border: none;
-        font-size: 20px;
-      }
-      body {
-        font-family: sans-serif;
-      }
-      img {
-        display: block;
-        width: 100px;
-        margin: 20px auto;
-      }
-      .nav-buttons {
-        display: flex;
-        width: 100%;
-        justify-content: space-evenly;
-        font-size: 30px;
-      }
-      .cardaja {
-        justify-content: center;
-        height: 300px;
-        background-color: #e0e0e0;
-        margin: 20px 10px;
-        border-radius: 8px;
-        text-align: center;
-        padding-top: 15px;
-        padding: 10px;
-        /* border-spacing: 30px 30px; */
-        /* width: 400px; */
-      }
-      .title {
-        color: #0c2b4b;
-        margin-top: 15px;
-      }
-      table {
-        width: 100%;
-        border-collapse: separate;
-        margin-top: 20px;
-      }
-      th,
-      td {
-        padding: 12px;
-        text-align: center;
-        border-bottom: 1px solid #dddddd;
-      }
-      th {
-        background-color: #007bff;
-        color: white;
-        border-radius: 5px 5px 0 0;
-      }
-      footer {
-        text-align: center; color: gray; font-size: 14px;
-      }
+        body { font-family: sans-serif; background-color: #f4f4f4; display: flex; justify-content: center; padding: 50px; }
+        .card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 400px; text-align: center; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #007bff; color: white; border-radius: 5px 5px 0 0; }
+        img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 4px solid #007bff; }
+        .title { color: #333; margin-top: 15px; }
     </style>
-  </head>
-  <body>
-    <header>
-      <h1>Where are you heading?</h1>
-      <div class="nav-buttons">
-        <button class="my-btn" onclick="window.location.href='izzul.html';">Izzul Page</button>
-        <button class="my-btn">Edwin Page</button>
-        <button class="my-btn" onclick="window.location.href='dega.html';">Diega Page</button>
-        <button class="my-btn">Bima Page</button>
-      </div>
-    </header>
-    <img
-      src="https://no-cdn.shortpixel.ai/client/to_avif,q_lossy,ret_wait/https://shortpixel.com/blog/wp-content/uploads/2023/12/nyan-cat.gif"
-      alt="Funny GIF"
-    />
-    <div class="cardaja">
-      <h2 class="title">Biodata Saya</h2>
-      <table>
-        <tr>
-          <th>Kategori</th>
-
-          <th>Keterangan</th>
-        </tr>
-        <tr>
-          <td>Nama</td>
-          <td>Aldo</td>
-        </tr>
-        <tr>
-          <td>Umur</td>
-          <td>18+</td>
-        </tr>
-        <tr>
-          <td>Tempat Lahir</td>
-          <td>Kota Bogor</td>
-        </tr>
-        <tr>
-          <td>Hobi</td>
-          <td>Ngetik when yh</td>
-        </tr>
-      </table>
+</head>
+<body>
+    <div class="card">
+        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Ganteng">
+        <h2 class="title">Biodata Saya</h2>
+        <table>
+            <tr><th>Kategori</th><th>Keterangan</th></tr>
+            <tr><td>Nama</td><td>Edwin Kurniawan</td></tr>
+            <tr><td>Umur</td><td>17 Tahun</td></tr>
+            <tr><td>Tempat Lahir</td><td>Asli Jember</td></tr>
+            <tr><td>Hobi</td><td>Mengaji</td></tr>
+        </table>
     </div>
-  </body>
-  <footer>
-      &copy; 2026 Aldo's Landing Page
-    </p>
-  </footer>
-  <script>
-    const allButtons = document.querySelectorAll('.my-btn');
-
-    allButtons.forEach(btn => {
-      btn.addEventListener('mousedown', () => {
-        btn.style.backgroundColor = '#2c2b81';
-        btn.style.color = 'white';
-      });
-
-      const resetStyle = () => {
-        btn.style.backgroundColor = '';
-        btn.style.color = '';
-      };
-
-      btn.addEventListener('mouseup', resetStyle);
-      btn.addEventListener('mouseleave', resetStyle);
-    })
-  </script>
+</body>
 </html>
